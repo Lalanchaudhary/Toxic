@@ -19,6 +19,6 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(form);
   const name = formData.get("name") || "there";
-  statusText.textContent = `Thanks, ${name}. Your enquiry is ready for the Wazir Electronics team.`;
+  statusText.textContent = `Thanks, ${name}. Your enquiry is ready for the Toxic Electronics team.`;
   form.reset();
 });
