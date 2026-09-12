@@ -17,6 +17,25 @@
 
   gtag('config', 'AW-18446415494');
 </script>
+<!-- Event snippet for Outbound click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18446415494/3apkCIaNgvUcEIbt99tE',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 </head>
 <body>
   <header class="site-header">
@@ -75,7 +94,7 @@
           href="https://wa.me/918434256245?text=I%20want%20to%20know%20more"
           aria-label="Chat with Toxic Electronics on WhatsApp"
           onclick="return gtag_report_conversion('https://wa.me/918434256245?text=I%20want%20to%20know%20more');">
-          <img src="Toxic.png" alt="Toxic Electronics offer" />
+          <img src="toxic.png" alt="Toxic Electronics offer" />
         </a>
       </div>
     </section>
